@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get Instagram public posts using Instagram api and parse the JSON data using REST-CLIENT and I will save them into my local database
+and create tags
 
-Things you may want to cover:
+I am passing a hash to Instagram.tag_recent_media in which ruby on rails developer can see :count=> 100 which will return 100 posts for a particular tag. By default instagram will return 20 posts for a tag.
 
-* Ruby version
+add a tag to get posts. Developers will be able to get posts in posts model
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Now, if you visit http://localhost:3000/posts/index you will have data of all your posts. Instagram returns an array of hashes in which every hash refers to a post. Every post contains data.
